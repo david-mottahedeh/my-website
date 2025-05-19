@@ -1,0 +1,41 @@
+/* Full-screen background */
+body {
+  margin: 0;
+  padding: 0;
+  background: url("images/background.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #000;
+}
+
+/* Overlay for layout */
+.overlay {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding-left: 60px;
+}
+
+/* Left text block */
+.left-text {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.left-text h1 {
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.left-text a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+
+.left-text a:hover {
+  text-decoration: underline;
+}
