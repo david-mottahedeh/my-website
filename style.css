@@ -9,6 +9,18 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   color: #000;
   height: 100vh;
+  position: relative;
+}
+
+/* Title in top-left corner */
+.site-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
 }
 
 /* Overlay for layout */
@@ -26,13 +38,6 @@ body {
   font-weight: normal;
   text-align: right;
   padding-right: 60px;
-}
-
-.left-text h1 {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: right;
 }
 
 /* Links */
