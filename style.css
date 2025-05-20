@@ -82,10 +82,10 @@ body.subpage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: start;
+  min-height: 100vh;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   box-sizing: border-box;
 }
 
@@ -96,6 +96,11 @@ body.subpage {
   aspect-ratio: 3 / 1;
   object-fit: cover;
   margin-bottom: 12px;
+}
+
+/* Larger variant of image */
+.writing-image.large {
+  width: 66vw;
 }
 
 /* Styled link under image (like homepage links) */
@@ -117,5 +122,28 @@ body.subpage {
   font-size: 14px;
   color: #666;
   margin-top: 6px;
-  max-width: 33vw;
+  max-width: 66vw;
+}
+
+/* Align caption to left edge of image */
+.aligned-left {
+  text-align: left;
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Scrollable embedded PDF container */
+.pdf-container {
+  margin-top: 20px;
+  width: 66vw;
+  height: 600px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
