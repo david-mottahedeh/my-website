@@ -6,7 +6,6 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 100vh;
   font-family: 'Helvetica Neue', sans-serif;
   color: #000;
 }
@@ -24,12 +23,15 @@ body {
   font-size: 14px;
   line-height: 1.6;
   font-weight: normal;
+  text-align: right;
+  padding-right: 60px;
 }
 
 .left-text h1 {
   font-weight: bold;
   font-size: 14px;
   margin-bottom: 10px;
+  text-align: right;
 }
 
 /* Links */
