@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>writings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="subpage">
+
+  <!-- Breadcrumb title -->
+  <div class="site-title">
+    <a href="index.html">/david_mottahed&#233;h</a><a href="publications.html">/writings</a>
+  </div>
+
+  <div class="center-content">
+    <img src="images/pomegranate_piece.jpg" alt="A Pomegranate's Half" class="writing-image" />
+    <div class="writing-caption">
+      <strong>A Pomegranate's Half</strong> (Hebrew) / <strong>Safa Hadasha</strong>, Vol.2 'Vacuum', February 2025
+    </div>
+  </div>
+
+</body>
+</html>
