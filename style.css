@@ -3,11 +3,12 @@ body {
   margin: 0;
   padding: 0;
   background: url("images/threshold_expanded.jpeg") no-repeat center center fixed;
-  background-size: auto;
+  background-size: auto 100vh; /* height fits exactly, width adjusts proportionally */
   background-repeat: no-repeat;
   background-position: center center;
   font-family: 'Helvetica Neue', sans-serif;
   color: #000;
+  height: 100vh;
 }
 
 /* Overlay for layout */
