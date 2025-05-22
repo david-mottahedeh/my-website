@@ -33,7 +33,7 @@ body.subpage {
   top: 66vh; /* Positioned roughly 1/3 from bottom */
   left: 0;
   width: auto;
-  padding-left: 52px;
+  padding-left: 0px; /*52*/
 }
 
 .left-text {
