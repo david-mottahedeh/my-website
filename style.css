@@ -1,7 +1,5 @@
-/* Import Source Code Pro font */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-/* Base body styling */
 body {
   margin: 0;
   padding: 0;
@@ -15,14 +13,12 @@ body {
   position: relative;
 }
 
-/* Subpage background */
 body.subpage {
   background: url("images/website_background_threshold_clean.jpeg") no-repeat center center fixed;
   background-size: auto 100vh;
   background-repeat: repeat-x;
 }
 
-/* Top-left site title */
 .site-title {
   position: absolute;
   top: 20px;
@@ -33,21 +29,19 @@ body.subpage {
   color: #000;
 }
 
-/* Overlay layout */
 .overlay {
   position: absolute;
-  top: 25vh; /* 1/4 of the viewport height */
+  top: 65vh; /* Position below center */
   left: 0;
   width: auto;
   padding-left: 60px;
 }
 
-/* Left side links */
 .left-text {
   font-size: 14px;
-  line-height: 1.6;
   font-weight: normal;
   text-align: right;
+  line-height: 1; /* No vertical gap between links */
 }
 
 .left-text a {
@@ -56,13 +50,14 @@ body.subpage {
   font-size: 14px;
   font-weight: normal;
   display: block;
+  margin: 0; /* Remove space between links */
 }
 
 .left-text a:hover {
   text-decoration: underline;
 }
 
-/* Writing image and caption styles for other pages */
+/* Remaining styles unchanged for other pages */
 .center-content {
   display: flex;
   flex-direction: column;
