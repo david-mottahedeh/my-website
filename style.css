@@ -5,7 +5,7 @@ body {
   padding: 0;
   overflow: hidden;
   background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
-  background-size: cover;
+  background-size: auto 100vh; /* ensure background fits height and doesn't zoom */
   font-family: 'Source Code Pro', monospace;
   color: #000;
   height: 100vh;
@@ -30,7 +30,7 @@ body.subpage {
 
 .overlay {
   position: absolute;
-  top: 60vh; /* Position below center */
+  top: 66vh; /* Positioned roughly 1/3 from bottom */
   left: 0;
   width: auto;
   padding-left: 52px;
@@ -40,7 +40,7 @@ body.subpage {
   font-size: 14px;
   font-weight: normal;
   text-align: right;
-  line-height: 1; /* No vertical gap between links */
+  line-height: 1; /* no space between lines */
 }
 
 .left-text a {
@@ -49,14 +49,14 @@ body.subpage {
   font-size: 14px;
   font-weight: normal;
   display: block;
-  margin: 0; /* Remove space between links */
+  margin: 0; /* remove link spacing */
 }
 
 .left-text a:hover {
   text-decoration: underline;
 }
 
-/* Remaining styles unchanged for other pages */
+/* Center content for subpages */
 .center-content {
   display: flex;
   flex-direction: column;
