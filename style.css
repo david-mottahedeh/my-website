@@ -1,23 +1,30 @@
-/* Base body styling */
-body {
+/* Prevent page scrolling and full viewport height */
+html, body {
   margin: 0;
   padding: 0;
-  background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
-  background-size: auto 100vh; /* height fits exactly, width adjusts proportionally */
-  background-repeat: repeat-x;
-  background-position: center center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Base body styling */
+body {
   font-family: 'Source Code Pro', monospace;
   color: #000;
-  height: 100vh;
   position: relative;
+  background-image: url("images/website_background_threshold.jpeg");
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: auto 100vh;
 }
 
 /* Subpage background */
 body.subpage {
-  background: url("images/website_background_threshold_clean.jpeg") no-repeat center center fixed;
-  background-size: auto 100vh;
+  background-image: url("images/website_background_threshold_clean.jpeg");
   background-repeat: repeat-x;
   background-position: center center;
+  background-attachment: fixed;
+  background-size: auto 100vh;
 }
 
 /* Top-left site title */
@@ -26,43 +33,46 @@ body.subpage {
   top: 20px;
   left: 20px;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: bold;
   font-family: 'Source Code Pro', monospace;
   color: #000;
   text-decoration: none;
 }
 
-/* Overlay layout for homepage */
+/* Overlay container */
 .overlay {
+  position: absolute;
+  bottom: 33vh; /* ~1/3 from bottom */
+  right: 60px; /* push links a bit from right edge */
   display: flex;
-  align-items: flex-end; /* changed from center to flex-end to move content down */
-  height: 100vh;
-  padding-left: 60px;
-  padding-bottom: 33vh; /* push links up about 1/3 from bottom */
+  align-items: flex-end;
+  height: auto;
 }
 
 /* Left side links (homepage only) */
 .left-text {
   font-size: 14px;
   line-height: 1.6;
-  -weight: normal;
+  font-weight: normal;
   text-align: right;
-  padding-right: 60px;
   color: #000;
 }
 
+/* Links styling */
 .left-text a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
   font-weight: normal;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .left-text a:hover {
   text-decoration: underline;
 }
 
-/* Other styles below unchanged */
+/* Center content block for writings.html */
 .center-content {
   display: flex;
   flex-direction: column;
@@ -74,6 +84,7 @@ body.subpage {
   box-sizing: border-box;
 }
 
+/* Image in writings.html */
 .writing-image {
   width: 33vw;
   height: auto;
@@ -82,10 +93,12 @@ body.subpage {
   margin-bottom: 12px;
 }
 
+/* Larger variant of image */
 .writing-image.large {
   width: 66vw;
 }
 
+/* Styled link under image (like homepage links) */
 .center-link a {
   text-decoration: none;
   color: #000;
@@ -99,6 +112,7 @@ body.subpage {
   text-decoration: underline;
 }
 
+/* Grey caption under link */
 .grey-caption {
   font-size: 14px;
   color: #666;
@@ -106,6 +120,7 @@ body.subpage {
   max-width: 66vw;
 }
 
+/* Align caption to left edge of image */
 .aligned-left {
   text-align: left;
   align-self: flex-start;
@@ -113,6 +128,7 @@ body.subpage {
   margin-right: auto;
 }
 
+/* Scrollable embedded PDF container */
 .pdf-container {
   margin-top: 20px;
   width: 66vw;
@@ -125,4 +141,20 @@ body.subpage {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
+  .overlay {
+    bottom: 20vh; /* slightly higher on mobile */
+    right: 20px;
+  }
+  .left-text a {
+    font-size: 12px;
+  }
 }
