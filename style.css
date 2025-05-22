@@ -6,7 +6,7 @@ body {
   background-size: auto 100vh; /* height fits exactly, width adjusts proportionally */
   background-repeat: repeat-x;
   background-position: center center;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Source Code Pro', monospace;
   color: #000;
   height: 100vh;
   position: relative;
@@ -27,7 +27,7 @@ body.subpage {
   left: 20px;
   font-size: 14px;
   font-weight: normal;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Source Code Pro', monospace;
   color: #000;
   text-decoration: none;
 }
@@ -45,7 +45,7 @@ body.subpage {
 .left-text {
   font-size: 14px;
   line-height: 1.6;
-  font-weight: normal;
+  -weight: normal;
   text-align: right;
   padding-right: 60px;
   color: #000;
