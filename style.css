@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("images/threshold_expanded.jpeg") no-repeat center center fixed;
+  background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
   background-size: auto 100vh; /* height fits exactly, width adjusts proportionally */
   background-repeat: repeat-x;
   background-position: center center;
