@@ -5,8 +5,7 @@ body {
   padding: 0;
   overflow: hidden;
   background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
-  background-size: auto 100vh;
-  background-repeat: repeat-x;
+  background-size: cover;
   font-family: 'Source Code Pro', monospace;
   color: #000;
   height: 100vh;
