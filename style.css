@@ -3,14 +3,13 @@ body {
   margin: 0;
   padding: 0;
   background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
-  background-size: auto 100vh;
+  background-size: auto 100vh; /* height fits exactly, width adjusts proportionally */
   background-repeat: repeat-x;
   background-position: center center;
-  font-family: Calibri, 'Helvetica Neue', sans-serif;
+  font-family: 'Times New Roman', serif;
   color: #000;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
 }
 
 /* Subpage background */
@@ -21,59 +20,109 @@ body.subpage {
   background-position: center center;
 }
 
-/* White vertical sidebar on the left */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 180px; /* adjust width to fit "mottahedéh" nicely */
-  height: 100vh;
-  background-color: #fff;
-  padding: 20px 20px 40px 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Site title at the top */
+/* Top-left site title */
 .site-title {
-  font-size: 14px;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  font-family: Calibri, 'Helvetica Neue', sans-serif;
-  user-select: none;
-  white-space: nowrap;
-}
-
-/* Navigation links container */
-.nav-links {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   font-size: 14px;
   font-weight: normal;
-  color: #000;
-  text-align: right;
-  margin-bottom: 25vh; /* Pushes links up from bottom by ~25% of viewport height */
-  line-height: 1.6;
-}
-
-/* Each nav link styling */
-.nav-links a {
+  font-family: 'Times New Roman', serif;
   color: #000;
   text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
-  font-family: Calibri, 'Helvetica Neue', sans-serif;
-  white-space: nowrap;
 }
 
-/* Hover effect on nav links */
-.nav-links a:hover {
+/* Overlay layout for homepage */
+.overlay {
+  display: flex;
+  align-items: flex-end; /* changed from center to flex-end to move content down */
+  height: 100vh;
+  padding-left: 60px;
+  padding-bottom: 33vh; /* push links up about 1/3 from bottom */
+}
+
+/* Left side links (homepage only) */
+.left-text {
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  text-align: right;
+  padding-right: 60px;
+  color: #000;
+}
+
+.left-text a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.left-text a:hover {
   text-decoration: underline;
 }
 
-/* Content overlay (for the background image) */
-.content-overlay {
-  margin-left: 180px; /* same as sidebar width */
-  height: 100vh;
+/* Other styles below unchanged */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.writing-image {
+  width: 33vw;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.writing-image.large {
+  width: 66vw;
+}
+
+.center-link a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.center-link a:hover {
+  text-decoration: underline;
+}
+
+.grey-caption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+  max-width: 66vw;
+}
+
+.aligned-left {
+  text-align: left;
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pdf-container {
+  margin-top: 20px;
+  width: 66vw;
+  height: 600px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
