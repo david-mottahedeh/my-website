@@ -31,7 +31,7 @@ body.subpage {
 
 .overlay {
   position: absolute;
-  top: 70vh; /* Position below center */
+  top: 62vh; /* Position below center */
   left: 0;
   width: auto;
   padding-left: 30px;
