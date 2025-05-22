@@ -2,60 +2,78 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #000;
-  height: 100vh;
   background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
   background-size: auto 100vh;
   background-repeat: repeat-x;
   background-position: center center;
-  display: flex;
+  font-family: Calibri, 'Helvetica Neue', sans-serif;
+  color: #000;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* White sidebar */
+/* Subpage background */
+body.subpage {
+  background: url("images/website_background_threshold_clean.jpeg") no-repeat center center fixed;
+  background-size: auto 100vh;
+  background-repeat: repeat-x;
+  background-position: center center;
+}
+
+/* White vertical sidebar on the left */
 .sidebar {
-  width: 200px;
-  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px; /* adjust width to fit "mottahedéh" nicely */
   height: 100vh;
+  background-color: #fff;
+  padding: 20px 20px 40px 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 0;
-  box-sizing: border-box;
-  position: relative;
 }
 
-/* Title at top-left */
+/* Site title at the top */
 .site-title {
   font-size: 14px;
   font-weight: bold;
   color: #000;
   text-decoration: none;
-  margin-left: 20px;
-  margin-bottom: 0;
+  font-family: Calibri, 'Helvetica Neue', sans-serif;
+  user-select: none;
+  white-space: nowrap;
 }
 
-/* Navigation area wrapper */
-.nav-wrapper {
-  position: absolute;
-  bottom: 33vh;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  box-sizing: border-box;
-}
-
-/* Navigation links */
-nav a {
-  text-decoration: none;
-  color: #000;
+/* Navigation links container */
+.nav-links {
   font-size: 14px;
-  line-height: 1.6;
-  display: block;
+  font-weight: normal;
+  color: #000;
   text-align: right;
+  margin-bottom: 25vh; /* Pushes links up from bottom by ~25% of viewport height */
+  line-height: 1.6;
 }
 
-nav a:hover {
+/* Each nav link styling */
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-family: Calibri, 'Helvetica Neue', sans-serif;
+  white-space: nowrap;
+}
+
+/* Hover effect on nav links */
+.nav-links a:hover {
   text-decoration: underline;
+}
+
+/* Content overlay (for the background image) */
+.content-overlay {
+  margin-left: 180px; /* same as sidebar width */
+  height: 100vh;
 }
