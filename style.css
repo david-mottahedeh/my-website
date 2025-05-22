@@ -30,10 +30,10 @@ body.subpage {
 
 .overlay {
   position: absolute;
-  top: 62vh; /* Position below center */
+  top: 60vh; /* Position below center */
   left: 0;
   width: auto;
-  padding-left: 45px;
+  padding-left: 52px;
 }
 
 .left-text {
