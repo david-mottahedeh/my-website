@@ -24,7 +24,7 @@ body.subpage {
   left: 20px;
   font-size: 14px;
   font-weight: bold;
-  text-decoration: underline dotted;
+  text-decoration: none;
   color: #000;
 }
 
