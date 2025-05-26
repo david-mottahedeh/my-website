@@ -22,9 +22,9 @@ body.subpage {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-size: 21px;
+  font-size: 14px;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration: underline dotted;
   color: #000;
 }
 
