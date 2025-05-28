@@ -16,19 +16,34 @@
       max-width: 1200px;
     }
 
-    .cv-section .comment {
-      color: gray;
-      font-size: 11px;
-      margin-bottom: 10px;
+    .cv-entry {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 6px;
     }
 
-    .cv-section p {
-      margin: 8px 0;
+    .cv-time {
+      width: 120px;
+      color: gray;
+      flex-shrink: 0;
+    }
+
+    .cv-description {
+      flex-grow: 1;
+    }
+
+    .cv-comment {
+      color: gray;
+      font-size: 11px;
+      margin: 2px 0 10px 0;
+    }
+
+    .cv-section h3 {
+      margin-top: 40px;
     }
   </style>
 </head>
 <body class="subpage">
-  <!-- Title in top-left corner -->
   <a href="index.html" class="site-title">/david_mottahed&#233;h</a>
   <div class="language-switch">
     <a href="index_he.html">עברית</a> | 
@@ -48,43 +63,41 @@
 
   <div class="cv-section">
     <h3>About</h3>
-    <p>My mother Simin Shalom Mottahedeh is from Golpayegan, Iran</p>
-    <p>My father Emanuel Mottahedeh is from Esfahan, Iran</p>
-    <p>They escaped from Tehran to Jerusalem with 2 children in 1989</p>
-    <p>I was born in Jerusalem, 1994</p>
-    <p>and raised in Jerusalem + Modi'in</p>
-    <p>and today I live and work in Tel Aviv, Israel</p>
-    
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description">My mother Simin Shalom Mottahedeh is from Golpayegan, Iran</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description">My father Emanuel Mottahedeh is from Esfahan, Iran</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description">They escaped from Tehran to Jerusalem with 2 children in 1989</div></div>
+    <div class="cv-entry"><div class="cv-time">1994</div><div class="cv-description">I was born in Jerusalem</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description">and raised in Jerusalem + Modi'in</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description">and today I live and work in Tel Aviv, Israel</div></div>
+
     <h3>Education</h3>
-    <p>2025 – The Professional Training Program, Edmond de Rothschild Foundation, Tel Aviv</p>
-    <p>2022 – 2024 – M.F.A. in Fine Arts, Bezalel Academy of Arts and Design, Tel Aviv/Jerusalem</p>
-    <p class="comment">M.F.A. Department Excellence Prize 2024</p>
-    <p>2013 – 2017 – M.Sc. Studies in Statistics, Tel Aviv University (no diploma)</p>
-    <p class="comment">coursework completed, thesis resumed 2025+</p>
-    <p>2009 – 2013 – B.Sc. in Mathematics and Statistics, Tel Aviv University</p>
-    <p class="comment">The Beno Arbel Program for Outstanding Youth in Mathematics. Started at age 15</p>
-    <p>2007 – 2009 – The Victor Bentata Program for Talented Youth in Mathematics, Bar Ilan University</p>
+    <div class="cv-entry"><div class="cv-time">2025</div><div class="cv-description">The Professional Training Program, Edmond de Rothschild Foundation, Tel Aviv</div></div>
+    <div class="cv-entry"><div class="cv-time">2022–2024</div><div class="cv-description">M.F.A. in Fine Arts, Bezalel Academy of Arts and Design, Tel Aviv/Jerusalem</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">M.F.A. Department Excellence Prize 2024</div></div>
+    <div class="cv-entry"><div class="cv-time">2013–2017</div><div class="cv-description">M.Sc. Studies in Statistics, Tel Aviv University (no diploma)</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">coursework completed, thesis resumed 2025+</div></div>
+    <div class="cv-entry"><div class="cv-time">2009–2013</div><div class="cv-description">B.Sc. in Mathematics and Statistics, Tel Aviv University</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">The Beno Arbel Program for Outstanding Youth in Mathematics. Started at age 15</div></div>
+    <div class="cv-entry"><div class="cv-time">2007–2009</div><div class="cv-description">The Victor Bentata Program for Talented Youth in Mathematics, Bar Ilan University</div></div>
 
     <h3>Exhibitions</h3>
-    <p>2025 – <em>Same River Twice</em>, Edmond de Rothschild Center, Tel Aviv</p>
-    <p class="comment">Group Exhibition. Curator: Dr. Irit Carmon Popper, Assistant Curator: Einat Gabai Levi</p>
-    <p>2024 – <em>A Pomegranate’s Half</em>, Bezalel MFA Thesis Exhibition, Tel Aviv</p>
-    <p class="comment">Mentor & Curator: Prof. Dor Guez</p>
-    <p>2023 – <em>Out of the Box: Tangled</em> (מחוץ לקופסא: סבוכים), Street Gallery, Jaffa</p>
-    <p class="comment">Group Exhibition. Curator: Dr. Yarden Stern</p>
+    <div class="cv-entry"><div class="cv-time">2025</div><div class="cv-description"><em>Same River Twice</em>, Edmond de Rothschild Center, Tel Aviv</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">Group Exhibition. Curator: Dr. Irit Carmon Popper, Assistant Curator: Einat Gabai Levi</div></div>
+    <div class="cv-entry"><div class="cv-time">2024</div><div class="cv-description"><em>A Pomegranate’s Half</em>, Bezalel MFA Thesis Exhibition, Tel Aviv</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">Mentor & Curator: Prof. Dor Guez</div></div>
+    <div class="cv-entry"><div class="cv-time">2023</div><div class="cv-description"><em>Out of the Box: Tangled</em> (מחוץ לקופסא: סבוכים), Street Gallery, Jaffa</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">Group Exhibition. Curator: Dr. Yarden Stern</div></div>
 
     <h3>Community-Based Projects</h3>
-    <p>2023 – <em>Jashne Deltangi: Golpayegan</em>, Almacen Gallery, Jaffa</p>
-    <p class="comment">Curator: Eva Glaser</p>
-    
-    <h3>Mathematical-Statistical Research/Teaching Background</h3>
-    <p>2022 – Present – Lecturer in Mathematics and Statistics, Tel Aviv University's Students Union</p>
-    <p>2018 – 2022 – Data Scientist, K Health, Tel Aviv</p>
-    <p>2016 – 2017 - Research Assistant, Ono Academic College</p>
-    <p>2011 – 2017 – Teaching Assistant, Mathematics and Statistics, Tel Aviv University</p>
-    <p class="comment">Began assisting at age 17, teaching at age 19</p>
+    <div class="cv-entry"><div class="cv-time">2023</div><div class="cv-description"><em>Jashne Deltangi: Golpayegan</em>, Almacen Gallery, Jaffa</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">Curator: Eva Glaser</div></div>
 
-    
+    <h3>Mathematical-Statistical Research/Teaching Background</h3>
+    <div class="cv-entry"><div class="cv-time">2022–Present</div><div class="cv-description">Lecturer in Mathematics and Statistics, Tel Aviv University's Students Union</div></div>
+    <div class="cv-entry"><div class="cv-time">2018–2022</div><div class="cv-description">Data Scientist, K Health, Tel Aviv</div></div>
+    <div class="cv-entry"><div class="cv-time">2016–2017</div><div class="cv-description">Research Assistant, Ono Academic College</div></div>
+    <div class="cv-entry"><div class="cv-time">2011–2017</div><div class="cv-description">Teaching Assistant, Mathematics and Statistics, Tel Aviv University</div></div>
+    <div class="cv-entry"><div class="cv-time"></div><div class="cv-description cv-comment">Began assisting at age 17, teaching at age 19</div></div>
   </div>
 </body>
 </html>
