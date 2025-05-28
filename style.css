@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+/* === Base Styles === */
 html, body {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ html, body {
   overflow-y: auto;
 }
 
+/* === Backgrounds === */
 body {
   background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
   background-size: auto 100vh;
@@ -16,11 +18,11 @@ body {
 }
 
 body.subpage {
-  background: url("images/website_background_threshold_clean.jpeg") no-repeat center center fixed;
+  background: url("images/website_background_threshold_clean.jpeg") repeat-x center center fixed;
   background-size: auto 100vh;
-  background-repeat: repeat-x;
 }
 
+/* === Fixed Title and Language Switch === */
 .site-title {
   position: fixed;
   top: 20px;
@@ -32,6 +34,26 @@ body.subpage {
   z-index: 1000;
 }
 
+.language-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  z-index: 1000;
+}
+
+.language-switch a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 8px;
+}
+
+.language-switch a:hover {
+  text-decoration: underline;
+}
+
+/* === Left Overlay Navigation === */
 .overlay {
   position: fixed;
   top: 68vh;
@@ -49,11 +71,11 @@ body.subpage {
 }
 
 .left-text a {
-  text-decoration: none;
-  color: #000;
+  display: block;
   font-size: 14px;
   font-weight: normal;
-  display: block;
+  text-decoration: none;
+  color: #000;
   margin: 0;
 }
 
@@ -61,25 +83,7 @@ body.subpage {
   text-decoration: underline;
 }
 
-/* CV / long-text scrollable section */
-.cv-section {
-  padding: 40px 100px 200px 200px; /* extra left padding to avoid overlap with overlay */
-  max-width: 1200px;
-  direction: ltr;
-  text-align: left;
-  font-size: 14px;
-}
-
-.cv-section .comment {
-  color: gray;
-  font-size: 13px;
-  margin-bottom: 10px;
-}
-
-.cv-section p {
-  margin: 8px 0;
-}
-
+/* === Centered and Writing Content === */
 .center-content {
   display: flex;
   flex-direction: column;
@@ -104,12 +108,12 @@ body.subpage {
 }
 
 .center-link a {
-  text-decoration: none;
-  color: #000;
+  display: inline-block;
   font-size: 14px;
   font-weight: normal;
+  color: #000;
+  text-decoration: none;
   margin-top: 8px;
-  display: inline-block;
 }
 
 .center-link a:hover {
@@ -120,17 +124,17 @@ body.subpage {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 14px;
   font-family: 'Source Code Pro', monospace;
   text-align: center;
 }
 
 .centered-link a {
-  text-decoration: none;
-  color: #000;
-  font-weight: normal;
   display: inline-block;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
 }
 
 .centered-link a:hover {
@@ -151,39 +155,27 @@ body.subpage {
   margin-right: auto;
 }
 
-.pdf-container {
-  margin-top: 20px;
-  width: 66vw;
-  height: 600px;
-  overflow: hidden;
-  border: 1px solid #ccc;
-}
-
-.pdf-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.language-switch {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+/* === Scrollable Text Sections === */
+.cv-section {
+  padding: 40px 100px 200px 200px; /* space for overlay */
+  max-width: 1200px;
+  direction: ltr;
+  text-align: left;
   font-size: 14px;
-  font-family: 'Source Code Pro', monospace;
-  z-index: 1000;
 }
 
-.language-switch a {
-  text-decoration: none;
-  color: #000;
-  margin-left: 8px;
+.cv-section p {
+  margin: 8px 0;
 }
 
-.language-switch a:hover {
-  text-decoration: underline;
+.cv-section .comment {
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
+
+/* === Headings === */
 h3 {
   margin-top: 40px;
 }
