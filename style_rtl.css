@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/* === Base Styles === */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Source Code Pro', monospace;
+  color: #000;
+  overflow-y: auto;
+  direction: rtl;
+}
+
+/* === Backgrounds === */
+body {
+  background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
+  background-size: auto 100vh;
+  position: relative;
+}
+
+body.subpage {
+  background: url("images/website_background_threshold_clean.jpeg") repeat-x center center fixed;
+  background-size: auto 100vh;
+}
+
+/* === Fixed Title and Language Switch === */
+.site-title {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  z-index: 1000;
+}
+
+.language-switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  z-index: 1000;
+}
+
+.language-switch a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 8px;
+}
+
+.language-switch a:hover {
+  text-decoration: underline;
+}
+
+/* === Right Overlay Navigation === */
+.overlay {
+  position: fixed;
+  top: 68vh;
+  right: 0;
+  width: auto;
+  padding-right: 20px;
+  z-index: 1000;
+}
+
+.left-text {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1;
+}
+
+.left-text a {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+}
+
+.left-text a:hover {
+  text-decoration: underline;
+}
+
+.right-text {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: right;
+  line-height: 1;
+}
+
+.right-text a {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+}
+
+.right-text a:hover {
+  text-decoration: underline;
+}
+
+/* === Centered and Writing Content === */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.writing-image {
+  width: 33vw;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.writing-image.large {
+  width: 66vw;
+}
+
+.center-link a {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.center-link a:hover {
+  text-decoration: underline;
+}
+
+.centered-link {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+}
+
+.centered-link a {
+  display: inline-block;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
+}
+
+.centered-link a:hover {
+  text-decoration: underline;
+}
+
+.grey-caption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+  max-width: 66vw;
+}
+
+/* === Aligned for RTL === */
+.aligned-left {
+  text-align: right;
+  align-self: flex-end;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* === Scrollable Text Sections === */
+.cv-section {
+  padding: 40px 200px 200px 100px; /* mirrored: more space on the right now */
+  max-width: 1200px;
+  direction: rtl;
+  text-align: right;
+  font-size: 14px;
+}
+
+.cv-section p {
+  margin: 8px 0;
+}
+
+.cv-section .comment {
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* === Headings === */
+h3 {
+  margin-top: 40px;
+}
+
+.cv-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0px 0;
+  max-width: 1200px;
+  margin-right: 0;
+  margin-left: auto;
+}
