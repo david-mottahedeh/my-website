@@ -33,6 +33,16 @@ body.subpage {
   color: #000;
   z-index: 1000;
 }
+.site-title_fa {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  z-index: 1000;
+}
 
 .language-switch {
   position: fixed;
@@ -42,14 +52,30 @@ body.subpage {
   font-family: 'Source Code Pro', monospace;
   z-index: 1000;
 }
+.language-switch_fa {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  font-family: 'Vazirmatn', sans-serif;
+  z-index: 1000;
+}
 
 .language-switch a {
   text-decoration: none;
   color: #000;
   margin-left: 8px;
 }
+.language-switch-fa a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 8px;
+}
 
 .language-switch a:hover {
+  text-decoration: underline;
+}
+.language-switch_fa a:hover {
   text-decoration: underline;
 }
 
@@ -60,6 +86,14 @@ body.subpage {
   left: 0;
   width: auto;
   padding-left: 20px;
+  z-index: 1000;
+}
+.overlay_fa {
+  position: fixed;
+  top: 68vh;
+  right: 0;
+  width: auto;
+  padding-right: 20px;
   z-index: 1000;
 }
 
@@ -80,6 +114,25 @@ body.subpage {
 }
 
 .left-text a:hover {
+  text-decoration: underline;
+}
+.right-text {
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1;
+}
+
+.right-text a {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+}
+
+.right-text a:hover {
   text-decoration: underline;
 }
 
@@ -174,6 +227,24 @@ body.subpage {
   margin-bottom: 10px;
 }
 
+.cv-section_fa {
+  padding: 40px 200px 200px 100px; /* space for overlay */
+  max-width: 1200px;
+  direction: rtl;
+  text-align: right;
+  font-size: 14px;
+}
+
+.cv-section_fa p {
+  margin: 8px 0;
+}
+
+.cv-section_fa .comment {
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
 
 /* === Headings === */
 h3 {
@@ -187,4 +258,13 @@ h3 {
   max-width: 1200px;
   margin-left: 0; /* ✅ aligns with text inside .cv-section */
   margin-right: auto;
+}
+.cv-divider_fa {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0px 0;
+  max-width: 1200px;
+  margin-right: 0; /* ✅ aligns with text inside .cv-section */
+  margin-left: auto;
 }
