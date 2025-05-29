@@ -19,7 +19,7 @@ body {
 }
 
 body.subpage {
-  background: url("images/website_background_threshold_clean.jpeg") repeat-x center center fixed;
+  background: url("images/background_threshold_clean.jpeg") repeat-x center center fixed;
   background-size: auto 100vh;
 }
 
