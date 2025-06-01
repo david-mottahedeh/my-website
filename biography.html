@@ -44,6 +44,27 @@
   </style>
 </head>
 <body class="subpage">
+  <!-- === step 1 mobile 1.6 START === -->
+  <!-- === 1. Mobile‐only menu button/container === -->
+  <div class="mobile-menu">
+    <button class="mobile-menu__toggle" aria-expanded="false">
+      <!-- You can use a simple “☰” hamburger icon, or a SVG/icon font -->
+      &#9776; Menu
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="works.html">/works</a>
+      <a href="biography.html">/biography</a>
+      <a href="golpayegan.html">/golpayegan</a>
+      <span class="mobile-menu__langs">
+        <a href="biography_he.html">עברית</a> |
+        <a href="biography_fa.html">فارسی</a>
+      </span>
+    </nav>
+  </div>
+
+  <!-- === step 1 mobile 1.6 END === -->
+
+  
   <a href="index.html" class="site-title">/david_mottahed&#233;h</a>
   <div class="language-switch">
     <a href="biography_he.html">עברית</a> | 
@@ -143,4 +164,23 @@
     
   </div>
 </body>
+  
+  <!-- === step 1 mobile 1.6 START === -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.querySelector('.mobile-menu__toggle');
+    const navMenu = document.querySelector('.mobile-menu__nav');
+
+    toggleBtn.addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      // Toggle aria‐expanded
+      this.setAttribute('aria-expanded', String(!expanded));
+      // Toggle the visibility of the nav
+      navMenu.style.display = expanded ? 'none' : 'flex';
+    });
+  });
+</script>
+  <!-- === step 1 mobile 1.6 END === -->
+
 </html>
