@@ -7,16 +7,33 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Title in top-left corner -->
+  <!-- === Mobile‐only menu bar === -->
+  <div class="mobile-menu">
+    <button class="mobile-menu__toggle" aria-expanded="false">
+      &#9776; Menu
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">/homepage</a>
+      <a href="works.html">/works</a>
+      <a href="biography.html">/biography</a>
+      <a href="golpayegan.html">/golpayegan</a>
+      <span class="mobile-menu__langs">
+        <a href="index_he.html">עברית</a> |
+        <a href="index_fa.html">فارسی</a>
+      </span>
+    </nav>
+  </div>
+
+  <!-- Title in top-left corner (desktop) -->
   <a href="index.html" class="site-title">/david_mottahed&#233;h</a>
 
-  <!-- Language switch -->
+  <!-- Language switch (desktop) -->
   <div class="language-switch">
     <a href="index_he.html">עברית</a> |
     <a href="index_fa.html">فارسی</a>
   </div>
 
-  <!-- Left overlay navigation -->
+  <!-- Left overlay navigation (desktop) -->
   <div class="overlay">
     <div class="left-text">
       <nav>
@@ -26,5 +43,19 @@
       </nav>
     </div>
   </div>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleBtn = document.querySelector('.mobile-menu__toggle');
+      const navMenu = document.querySelector('.mobile-menu__nav');
+
+      toggleBtn.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        navMenu.style.display = expanded ? 'none' : 'flex';
+      });
+    });
+  </script>
 </body>
 </html>
