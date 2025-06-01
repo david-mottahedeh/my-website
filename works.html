@@ -1,34 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Works – Your Name</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Works – david_mottahed&#233;h</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+    /* === Base Styles === */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Source Code Pro', monospace;
+      color: #000;
+      overflow-y: auto;
+    }
+
+    /* === Backgrounds === */
+    body {
+      background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
+      background-size: auto 100vh;
+      position: relative;
+    }
+
+    body.subpage {
+      background: url("images/background_threshold_clean.jpeg") repeat-x center center fixed;
+      background-size: auto 100vh;
+    }
+
+    /* === Fixed Title and Language Switch (desktop) === */
+    .site-title {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      z-index: 1000;
+    }
+
+    .language-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+      font-family: 'Source Code Pro', monospace;
+      z-index: 1000;
+    }
+
+    .language-switch a {
+      text-decoration: none;
+      color: #000;
+      margin-left: 8px;
+    }
+    .language-switch a:hover {
+      text-decoration: underline;
+    }
+
+    /* === Left Overlay Navigation (desktop) === */
+    .overlay {
+      position: fixed;
+      top: 68vh;
+      left: 0;
+      padding-left: 20px;
+      z-index: 1000;
+    }
+
+    .left-text {
+      font-size: 14px;
+      text-align: right;
+      line-height: 1;
+    }
+
+    .left-text a {
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+      color: #000;
+      margin: 0;
+    }
+    .left-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* === CV/Works Section (desktop) === */
+    .cv-section {
+      padding: 40px 100px 200px 200px; /* space for overlay */
+      max-width: 1200px;
+      direction: ltr;
+      text-align: left;
+      font-size: 12px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    /* === Work Entries === */
+    .work-entry {
+      margin-bottom: 24px;
+    }
+
+    .work-entry a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .work-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .work-desc {
+      font-size: 12px;
+      color: #000;
+    }
+
+    .work-desc em {
+      font-style: italic;
+    }
+
+    /* === Divider between entries === */
+    .work-divider {
+      border: none;
+      height: 1px;
+      background-color: #ccc;
+      margin: 16px 0;
+    }
+
+    /* === Mobile‐only menu base styles === */
+    .mobile-menu {
+      display: none; /* hidden by default on desktop */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 10px 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1001;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+    .mobile-menu__toggle {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-family: 'Source Code Pro', monospace;
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+    }
+    .mobile-menu__nav {
+      display: none;
+      flex-direction: column;
+      margin-top: 8px;
+    }
+    .mobile-menu__nav a {
+      font-size: 12px;
+      font-family: 'Source Code Pro', monospace;
+      text-decoration: none;
+      color: #000;
+      margin: 6px 0;
+    }
+    .mobile-menu__nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === Responsive Adjustments === */
+    @media (max-width: 768px) {
+      /* Show mobile menu bar */
+      .mobile-menu {
+        display: flex;
+      }
+
+      /* Hide desktop‐only links */
+      .site-title,
+      .language-switch,
+      .overlay {
+        display: none !important;
+      }
+
+      /* Expand CV/Works to full width with minimal padding */
+      .cv-section {
+        padding: 60px 16px 200px 16px;
+        max-width: none;
+        margin: 0;
+        font-size: 12px;
+      }
+
+      /* Ensure images scale for mobile */
+      .work-image {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+
+      /* Stack each entry on narrow screens */
+      .work-entry {
+        margin-bottom: 20px;
+      }
+      .work-desc {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="works.html">Works</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+
+<body class="subpage">
+  <!-- === Mobile‐only menu bar === -->
+  <div class="mobile-menu">
+    <button class="mobile-menu__toggle" aria-expanded="false">
+      &#9776; Menu
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">/homepage</a>
+      <a href="works.html">/works</a>
+      <a href="biography.html">/biography</a>
+      <a href="golpayegan.html">/golpayegan</a>
+      <span class="mobile-menu__langs">
+        <a href="index_he.html">עברית</a> |
+        <a href="index_fa.html">فارسی</a>
+      </span>
     </nav>
-  </header>
+  </div>
 
-  <main>
-    <h1>Works</h1>
-    <div class="gallery">
-      <div class="work">
-        <img src="assets/images/thumb1.jpg" alt="Work Title">
-        <p><strong>Work Title</strong>, 2023<br>Medium, size, short description</p>
-      </div>
+  <!-- === Desktop links === -->
+  <a href="index.html" class="site-title">/david_mottahed&#233;h</a>
+  <div class="language-switch">
+    <a href="index_he.html">עברית</a> |
+    <a href="index_fa.html">فارسی</a>
+  </div>
+  <div class="overlay">
+    <div class="left-text">
+      <nav>
+        <a href="works.html">/works</a><br />
+        <a href="biography.html">/biography</a><br />
+        <a href="golpayegan.html">/golpayegan</a><br />
+      </nav>
     </div>
-  </main>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+  <!-- === Works Section === -->
+  <div class="cv-section">
+    <!-- Work #1 -->
+    <div class="work-entry">
+      <a href="works/a_pomegranates_half.html">
+        <img src="images/works/a_pomegranates_half_thumb.jpg" alt="A Pomegranate’s Half" class="work-image" />
+        <div class="work-desc"><em>A Pomegranate’s Half</em><br />Thesis exhibition, Bezalel MFA, 2024</div>
+      </a>
+    </div>
+    <hr class="work-divider" />
+
+    <!-- Work #2 -->
+    <div class="work-entry">
+      <a href="works/out_of_the_box_tangled.html">
+        <img src="images/works/out_of_the_box_tangled_thumb.jpg" alt="Out of the Box: Tangled" class="work-image" />
+        <div class="work-desc"><em>Out of the Box: Tangled</em><br />Street Gallery, Jaffa, 2023</div>
+      </a>
+    </div>
+    <hr class="work-divider" />
+
+    <!-- Work #3 -->
+    <div class="work-entry">
+      <a href="works/same_river_twice.html">
+        <img src="images/works/same_river_twice_thumb.jpg" alt="Same River Twice" class="work-image" />
+        <div class="work-desc"><em>Same River Twice</em><br />Edmond de Rothschild Center, Tel Aviv, 2025</div>
+      </a>
+    </div>
+    <hr class="work-divider" />
+
+    <!-- Work #4 -->
+    <div class="work-entry">
+      <a href="works/jashne_deltangi_golpayegan.html">
+        <img src="images/works/jashne_deltangi_golpayegan_thumb.jpg" alt="Jashne Deltangi: Golpayegan" class="work-image" />
+        <div class="work-desc"><em>Jashne Deltangi: Golpayegan</em><br />Almacen Gallery, Jaffa, 2023</div>
+      </a>
+    </div>
+    <hr class="work-divider" />
+
+    <!-- Work #5 -->
+    <div class="work-entry">
+      <a href="works/carpet_museum_of_iran.html">
+        <img src="images/works/carpet_museum_of_iran_thumb.jpg" alt="Carpet Museum of Iran" class="work-image" />
+        <div class="work-desc"><em>Carpet Museum of Iran</em><br />Review featured in Haaretz, 2025</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- === Mobile menu toggle script === -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleBtn = document.querySelector('.mobile-menu__toggle');
+      const navMenu = document.querySelector('.mobile-menu__nav');
+
+      toggleBtn.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        navMenu.style.display = expanded ? 'none' : 'flex';
+      });
+    });
+  </script>
 </body>
 </html>
