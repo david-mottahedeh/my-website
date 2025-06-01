@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>david_mottahed&#233;h</title>
+
+  <!-- Inline styles specific to this page -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-    /* === Base Styles === */
+    /* Base Styles */
     html, body {
       margin: 0;
       padding: 0;
@@ -17,19 +19,18 @@
       overflow-y: auto;
     }
 
-    /* === Backgrounds === */
+    /* Backgrounds */
     body {
       background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
       background-size: auto 100vh;
       position: relative;
     }
-
     body.subpage {
       background: url("images/background_threshold_clean.jpeg") repeat-x center center fixed;
       background-size: auto 100vh;
     }
 
-    /* === Fixed Title and Language Switch (desktop) === */
+    /* Fixed Title and Language Switch (desktop) */
     .site-title {
       position: fixed;
       top: 20px;
@@ -40,7 +41,6 @@
       color: #000;
       z-index: 1000;
     }
-
     .language-switch {
       position: fixed;
       top: 20px;
@@ -49,7 +49,6 @@
       font-family: 'Source Code Pro', monospace;
       z-index: 1000;
     }
-
     .language-switch a {
       text-decoration: none;
       color: #000;
@@ -59,27 +58,22 @@
       text-decoration: underline;
     }
 
-    /* === Left Overlay Navigation (desktop) === */
+    /* Left Overlay Navigation (desktop) */
     .overlay {
       position: fixed;
       top: 68vh;
       left: 0;
-      width: auto;
       padding-left: 20px;
       z-index: 1000;
     }
-
     .left-text {
       font-size: 14px;
-      font-weight: normal;
       text-align: right;
       line-height: 1;
     }
-
     .left-text a {
       display: block;
       font-size: 14px;
-      font-weight: normal;
       text-decoration: none;
       color: #000;
       margin: 0;
@@ -88,25 +82,22 @@
       text-decoration: underline;
     }
 
-    /* === CV Section (desktop) === */
+    /* CV Section (desktop) */
     .cv-section {
       padding: 40px 100px 200px 200px; /* space for overlay */
       max-width: 1200px;
       direction: ltr;
       text-align: left;
-      font-size: 12px;          /* changed from 11px to 12px */
-      margin: 0 auto;           /* center on large screens */
+      font-size: 12px;
+      margin: 0 auto;
       box-sizing: border-box;
     }
-
-    /* Image above contact */
     .cv-image {
       width: 25%;
       height: auto;
       display: block;
       margin-bottom: 1em;
     }
-
     .cv-entry {
       display: flex;
       gap: 20px;
@@ -135,13 +126,13 @@
       border: none;
       height: 1px;
       background-color: #ccc;
-      margin: 0px 0;
+      margin: 0;
       max-width: 1200px;
       margin-left: 0;
       margin-right: auto;
     }
 
-    /* === Mobile‐only menu base styles === */
+    /* Mobile‐only menu base styles */
     .mobile-menu {
       display: none; /* hidden by default on desktop */
       position: fixed;
@@ -170,7 +161,7 @@
       margin-top: 8px;
     }
     .mobile-menu__nav a {
-      font-size: 12px;         /* changed from 11px to 12px */
+      font-size: 12px;
       font-family: 'Source Code Pro', monospace;
       text-decoration: none;
       color: #000;
@@ -180,7 +171,7 @@
       text-decoration: underline;
     }
 
-    /* === Hide original desktop‐only elements & adjust CV on small screens === */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       /* Show mobile menu bar */
       .mobile-menu {
@@ -199,7 +190,7 @@
         padding: 60px 16px 200px 16px;
         max-width: none;
         margin: 0;
-        font-size: 12px;      /* maintain 12px on mobile */
+        font-size: 12px;
       }
 
       /* Ensure image scales for mobile */
@@ -215,21 +206,21 @@
       .cv-time {
         width: auto;
         margin-bottom: 4px;
-        font-size: 12px;      /* maintain 12px on mobile */
+        font-size: 12px;
       }
       .cv-description {
         margin-bottom: 12px;
-        font-size: 12px;      /* maintain 12px on mobile */
+        font-size: 12px;
       }
       .cv-section h3 {
-        font-size: 12px;      /* maintain 12px on mobile */
+        font-size: 12px;
       }
     }
   </style>
 </head>
 
 <body class="subpage">
-  <!-- === Mobile‐only menu bar === -->
+  <!-- Mobile‐only menu bar -->
   <div class="mobile-menu">
     <button class="mobile-menu__toggle" aria-expanded="false">
       &#9776; Menu
@@ -246,7 +237,7 @@
     </nav>
   </div>
 
-  <!-- === Desktop links === -->
+  <!-- Desktop links -->
   <a href="index.html" class="site-title">/david_mottahed&#233;h</a>
   <div class="language-switch">
     <a href="biography_he.html">עברית</a> |
@@ -262,10 +253,10 @@
     </div>
   </div>
 
-  <!-- === CV Section === -->
+  <!-- CV Section -->
   <div class="cv-section">
-    <!-- insert image 1 line above contact -->
-    <img src="images/david_kid.jpeg" alt="David" class="cv-image" />
+    <!-- Image above contact -->
+    <img src="images/david_kid.jpeg" alt="David as a child" class="cv-image" />
 
     <div class="cv-entry">
       <div class="cv-time">contact:</div>
@@ -452,7 +443,7 @@
     </div>
   </div>
 
-  <!-- === Mobile menu toggle script === -->
+  <!-- Mobile menu toggle script -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const toggleBtn = document.querySelector('.mobile-menu__toggle');
