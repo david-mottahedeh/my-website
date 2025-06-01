@@ -194,3 +194,68 @@ h3 {
   margin-left: 0; /* ✅ aligns with text inside .cv-section */
   margin-right: auto;
 }
+
+/* === 01.06 Mobile‐only menu base styles === */
+.mobile-menu {
+  display: none;            /* hide by default on large screens */
+  position: fixed;
+  top: 20px;
+  left: 20px;               /* you can adjust if you want it on the right */
+  z-index: 1001;            /* above .site-title/.language-switch */
+}
+
+.mobile-menu__toggle {
+  background: rgba(255, 255, 255, 0.9); /* semi‐opaque white background */
+  border: 1px solid #000;
+  padding: 6px 10px;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  cursor: pointer;
+}
+
+.mobile-menu__nav {
+  display: none;           /* hidden until “Menu” is clicked */
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #000;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-menu__nav a {
+  display: block;
+  font-size: 14px;
+  font-family: 'Source Code Pro', monospace;
+  text-decoration: none;
+  color: #000;
+  margin: 4px 0;
+}
+
+.mobile-menu__nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Hide original fixed elements on small screens; show mobile menu === */
+@media (max-width: 768px) {
+  /* 1. Show mobile‐only menu container */
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* 2. Hide the desktop/large‐screen items */
+  .site-title,
+  .language-switch,
+  .overlay {
+    display: none;
+  }
+
+  /* 3. Make .cv-section fill the width nicely */
+  .cv-section {
+    padding: 20px 16px 200px 16px;  /* reduce left/right padding */
+    max-width: none;               /* let it go full width */
+  }
+}
