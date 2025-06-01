@@ -99,6 +99,14 @@
       box-sizing: border-box;
     }
 
+    /* Image above contact */
+    .cv-image {
+      width: 25%;
+      height: auto;
+      display: block;
+      margin-bottom: 1em;
+    }
+
     .cv-entry {
       display: flex;
       gap: 20px;
@@ -108,20 +116,20 @@
       width: 120px;
       color: gray;
       flex-shrink: 0;
-      font-size: 12px;         /* changed from 11px to 12px */
+      font-size: 12px;
     }
     .cv-description {
       flex-grow: 1;
-      font-size: 12px;         /* changed from 11px to 12px */
+      font-size: 12px;
     }
     .cv-comment {
       color: gray;
-      font-size: 12px;         /* changed from 11px to 12px */
+      font-size: 12px;
       margin: 2px 0 10px 0;
     }
     .cv-section h3 {
       margin-top: 40px;
-      font-size: 12px;         /* changed from 11px to 12px */
+      font-size: 12px;
     }
     .cv-divider {
       border: none;
@@ -194,6 +202,12 @@
         font-size: 12px;      /* maintain 12px on mobile */
       }
 
+      /* Ensure image scales for mobile */
+      .cv-image {
+        width: 50%;
+        margin-bottom: 1em;
+      }
+
       /* Stack each entry on narrow screens */
       .cv-entry {
         display: block;
@@ -250,6 +264,9 @@
 
   <!-- === CV Section === -->
   <div class="cv-section">
+    <!-- insert image 1 line above contact -->
+    <img src="david_kid.jpeg" alt="David as a child" class="cv-image" />
+
     <div class="cv-entry">
       <div class="cv-time">contact:</div>
       <div class="cv-description">david.mottahedeh@gmail.com</div>
