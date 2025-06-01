@@ -3,44 +3,189 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Works</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>david_mottahedéh</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Source Code Pro', monospace;
+      color: #000;
+      overflow-y: auto;
+    }
+
+    body {
+      background: url("images/website_background_threshold.jpeg") no-repeat center center fixed;
+      background-size: auto 100vh;
+      position: relative;
+    }
+
+    body.subpage {
+      background: url("images/background_threshold_clean.jpeg") repeat-x center center fixed;
+      background-size: auto 100vh;
+    }
+
+    .site-title {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      z-index: 1000;
+    }
+
+    .language-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+      font-family: 'Source Code Pro', monospace;
+      z-index: 1000;
+    }
+
+    .language-switch a {
+      text-decoration: none;
+      color: #000;
+      margin-left: 8px;
+    }
+
+    .language-switch a:hover {
+      text-decoration: underline;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 68vh;
+      left: 0;
+      padding-left: 20px;
+      z-index: 1000;
+    }
+
+    .left-text {
+      font-size: 14px;
+      text-align: right;
+      line-height: 1;
+    }
+
+    .left-text a {
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+      color: #000;
+      margin: 0;
+    }
+
+    .left-text a:hover {
+      text-decoration: underline;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 10px 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1001;
+      box-sizing: border-box;
+      flex-direction: column;
+    }
+
+    .mobile-menu__toggle {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-family: 'Source Code Pro', monospace;
+      cursor: pointer;
+      text-align: left;
+      padding: 0;
+    }
+
+    .mobile-menu__nav {
+      display: none;
+      flex-direction: column;
+      margin-top: 8px;
+    }
+
+    .mobile-menu__nav a {
+      font-size: 12px;
+      font-family: 'Source Code Pro', monospace;
+      text-decoration: none;
+      color: #000;
+      margin: 6px 0;
+    }
+
+    .mobile-menu__nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu {
+        display: flex;
+      }
+
+      .site-title,
+      .language-switch,
+      .overlay {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
-<body>
-  <!-- Background Image -->
-  <div class="background-image"></div>
 
-  <!-- Desktop Menu -->
-  <div class="side-menu left">
-    <a href="index.html">/david_mottahedeh</a>
-    <a href="biography.html">/biography</a>
-    <a href="works.html" class="active">/works</a>
-  </div>
-  <div class="side-menu right">
-    <a href="#">EN</a>
-    <a href="#">FA</a>
-    <a href="#">HE</a>
-  </div>
-
-  <!-- Mobile Menu -->
+<body class="subpage">
+  <!-- Mobile menu -->
   <div class="mobile-menu">
-    <button class="menu-toggle">≡</button>
-    <div class="mobile-links">
-      <a href="index.html">/david_mottahedeh</a>
+    <button class="mobile-menu__toggle" aria-expanded="false">
+      &#9776; Menu
+    </button>
+    <nav class="mobile-menu__nav">
+      <a href="index.html">/homepage</a>
+      <a href="works.html">/works</a>
       <a href="biography.html">/biography</a>
-      <a href="works.html" class="active">/works</a>
-      <div class="mobile-languages">
-        <a href="#">EN</a>
-        <a href="#">FA</a>
-        <a href="#">HE</a>
-      </div>
+      <a href="golpayegan.html">/golpayegan</a>
+      <span class="mobile-menu__langs">
+        <a href="biography_he.html">עברית</a> |
+        <a href="biography_fa.html">فارسی</a>
+      </span>
+    </nav>
+  </div>
+
+  <!-- Desktop site title and nav -->
+  <a href="index.html" class="site-title">/david_mottahed&#233;h</a>
+
+  <div class="language-switch">
+    <a href="biography_he.html">עברית</a> |
+    <a href="biography_fa.html">فارسی</a>
+  </div>
+
+  <div class="overlay">
+    <div class="left-text">
+      <nav>
+        <a href="works.html">/works</a><br />
+        <a href="biography.html">/biography</a><br />
+        <a href="golpayegan.html">/golpayegan</a><br />
+      </nav>
     </div>
   </div>
 
-  <!-- Content Container -->
-  <main class="content">
-    <!-- Portfolio content will go here -->
-  </main>
+  <script>
+    // Toggle mobile nav
+    const toggleButton = document.querySelector('.mobile-menu__toggle');
+    const mobileNav = document.querySelector('.mobile-menu__nav');
+
+    toggleButton.addEventListener('click', () => {
+      const isOpen = mobileNav.style.display === 'flex';
+      mobileNav.style.display = isOpen ? 'none' : 'flex';
+      toggleButton.setAttribute('aria-expanded', String(!isOpen));
+    });
+  </script>
 </body>
 </html>
